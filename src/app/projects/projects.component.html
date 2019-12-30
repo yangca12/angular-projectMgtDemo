@@ -1,0 +1,52 @@
+
+
+ <!-- <input 
+   (keyup.enter) = "createPost(title)" #title
+   type="text" class = "form-control">  -->
+
+
+<form #pro="ngForm">
+    <h2>Project List</h2>
+   <!-- <button class ="btn btn-primary" (click)="ngOnInit()">Projects</button> -->
+   <!-- <button
+    (click)="updatePost(post)">UPDATE</button>
+    <button
+    (click)="deletePost(post)">DELETE</button> -->
+
+     <div *ngFor ="let project of projects" class="form-group">
+         <label>Project ID</label>
+             <input ngModel 
+             name="projectID" 
+             #projectID="ngModel" 
+             id="projectID" type="text" 
+             class="form-control" placeholder={{project.projectID}}>
+
+         <label>Project Title</label>
+             <input ngModel 
+             name="projectTitle" 
+             #projectTitle="ngModel" 
+             id="projectTitle" type="text" 
+             class="form-control" placeholder={{project.projectTitle}}>
+
+         <label>Project Description</label>
+             <input ngModel 
+             name="projectDesc" 
+             #projectDesc="ngModel" 
+             id="projectDesc" type="text" 
+             class="form-control" placeholder={{project.projectDesc}}>
+
+        <label>Project Deadline</label>
+             <input ngModel 
+             name="deadline" 
+             #deadline="ngModel" 
+             id="deadline" type="datetime" 
+             class="form-control" placeholder={{project.deadline}}>
+             <hr>
+     </div> 
+       
+ 
+     <p>
+        {{ pro.value | json }}
+     </p>
+
+</form>
