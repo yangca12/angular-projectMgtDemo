@@ -2,7 +2,7 @@
 
 @import "~bootstrap/dist/css/bootstrap.css";
 
-body { padding-top : 160px; }
+body { padding-top : 100px; }
 
 form { padding : 40px; }
 .form-control.ng-touched.ng-invalid {
