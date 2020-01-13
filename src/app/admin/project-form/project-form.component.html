@@ -1,0 +1,30 @@
+<form #f="ngForm" (ngSubmit)="save(f.value)">
+
+  <div class="form-group">
+    <label for="title">Project Title</label>
+    <input ngModel name = "projectTitle" id="title" type="text" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="description">Project Description</label>
+    <input ngModel name = "projectDesc" id="description" type="text" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="label">Label</label>
+    <input ngModel name ="label" id="label" type="text" class="form-control">
+  </div>
+
+
+  <div class="form-group">
+    <label for="deadline">Deadline</label>
+    <input ngModel name="deadline" id="deadline" type="date" class="form-control">
+  </div>
+
+  <a href="" class="btn btn-secondary btn-block">Add Client</a>
+
+  <button class="btn btn-primary btn-block" >Save</button>
+
+
+</form>
+

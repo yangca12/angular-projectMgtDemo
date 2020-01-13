@@ -14,7 +14,10 @@ export class ProjectsComponent implements OnInit {
 
   projects: any[];
 
+  result$;
+
   constructor(private service: ProjectsService) { }
+
 
   updateProject(project) {
 

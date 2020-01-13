@@ -18,6 +18,7 @@ import { MyProjectsComponent } from './my-projects/my-projects.component';
 import { AdminProjectsComponent } from './admin/admin-projects/admin-projects.component';
 import { LoginComponent } from './login/login.component';
 import { JobitemComponent } from './jobitem/jobitem.component';
+import { ProjectFormComponent } from './admin/project-form/project-form.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { JobitemComponent } from './jobitem/jobitem.component';
     MyProjectsComponent,
     AdminProjectsComponent,
     LoginComponent,
-    JobitemComponent
+    JobitemComponent,
+    ProjectFormComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { JobitemComponent } from './jobitem/jobitem.component';
       {path: 'client', component: ClientComponent},
       {path: 'job-item', component: JobitemComponent},
       {path: 'login', component: LoginComponent},
-      {path: 'admin/projects', component: AdminProjectsComponent}
+      {path: 'admin/projects', component: AdminProjectsComponent},
+      {path: 'admin/projects/new', component: ProjectFormComponent},
 
     ])
 

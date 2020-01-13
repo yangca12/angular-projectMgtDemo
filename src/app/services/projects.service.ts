@@ -5,12 +5,11 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ProjectsService extends DataService{
+export class ProjectsService extends DataService {
 
-  constructor(httpClient : HttpClient) { 
-    super('http://localhost:8090/projects',
-    httpClient) 
+  constructor(httpClient: HttpClient) {
+    super('http://localhost:8090/projects', httpClient);
   }
 
-  
+
 }
