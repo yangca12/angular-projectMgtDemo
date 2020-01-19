@@ -1,0 +1,44 @@
+<form #f="ngForm" (ngSubmit)="save(f.value)">
+
+  <div class="form-group">
+    <label for="companyName">Company Name</label>
+    <input ngModel name = "companyName" id="companyName" type="text" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="number">Business Number</label>
+    <input ngModel name = "businessNumber" id="number" type="text" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="website">Company Website</label>
+    <input ngModel name ="companyWebsite" id="website" type="text" class="form-control">
+  </div>
+
+
+  <div class="form-group">
+    <label for="street">Street</label>
+    <input ngModel name="street" id="street" type="text" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="country">Country</label>
+    <input ngModel name="country" id="country" type="text" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="city">City</label>
+    <input ngModel name="city" id="city" type="text" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="postalCode">Postal Code</label>
+    <input ngModel name="postalCode" id="postalCode" type="text" class="form-control">
+  </div>
+
+  <a routerLink="/admin/projects/new" class="btn btn-primary btn-group">Save</a>
+
+  <a routerLink="/admin/projects/new" class="btn btn-secondary btn-group"> Cancel </a>
+
+
+</form>

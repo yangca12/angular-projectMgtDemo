@@ -13,12 +13,15 @@ import {FormsModule} from '@angular/forms';
 import { ProjectsService } from './services/projects.service';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { HomeComponent } from './home/home.component';
-import { ClientComponent } from './client/client.component';
+import { ClientListComponent } from './client-list/client-list.component';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
 import { AdminProjectsComponent } from './admin/admin-projects/admin-projects.component';
 import { LoginComponent } from './login/login.component';
 import { JobitemComponent } from './jobitem/jobitem.component';
 import { ProjectFormComponent } from './admin/project-form/project-form.component';
+import { ClientFormComponent } from './client-form/client-form.component';
+import {ClientService} from './services/client.service';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 @NgModule({
@@ -27,12 +30,14 @@ import { ProjectFormComponent } from './admin/project-form/project-form.componen
     ProjectsComponent,
     BsNavbarComponent,
     HomeComponent,
-    ClientComponent,
+    ClientListComponent,
     MyProjectsComponent,
     AdminProjectsComponent,
     LoginComponent,
     JobitemComponent,
-    ProjectFormComponent
+    ProjectFormComponent,
+    ClientFormComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -42,17 +47,20 @@ import { ProjectFormComponent } from './admin/project-form/project-form.componen
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'projects', component: ProjectsComponent},
-      {path: 'client', component: ClientComponent},
+      {path: 'client-list', component: ClientListComponent},
       {path: 'job-item', component: JobitemComponent},
       {path: 'login', component: LoginComponent},
       {path: 'admin/projects', component: AdminProjectsComponent},
       {path: 'admin/projects/new', component: ProjectFormComponent},
+      {path: 'admin/client/new', component: ClientFormComponent},
+      {path: 'registration', component: RegistrationComponent}
 
     ])
 
   ],
   providers: [
     ProjectsService,
+    ClientService,
     {provide: ErrorHandler , useClass: AppErrorHandler} // config global error handler
 
   ],
