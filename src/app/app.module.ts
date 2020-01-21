@@ -22,6 +22,7 @@ import { ProjectFormComponent } from './admin/project-form/project-form.componen
 import { ClientFormComponent } from './client-form/client-form.component';
 import {ClientService} from './services/client.service';
 import { RegistrationComponent } from './registration/registration.component';
+import {LoginService} from './services/login.service';
 
 
 @NgModule({
@@ -61,6 +62,7 @@ import { RegistrationComponent } from './registration/registration.component';
   providers: [
     ProjectsService,
     ClientService,
+    LoginService,
     {provide: ErrorHandler , useClass: AppErrorHandler} // config global error handler
 
   ],
