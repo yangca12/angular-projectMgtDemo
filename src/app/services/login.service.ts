@@ -8,8 +8,8 @@ import {DataService} from './data.service';
 export class LoginService extends DataService {
 // { "username" :"admin", "password" :"1234"}
 
-  constructor( httpClient: HttpClient) {
-    super('http://localhost:8090/login', httpClient);
+  constructor( http: HttpClient) {
+    super('http://localhost:8090/auth/login', http);
   }
 
 }

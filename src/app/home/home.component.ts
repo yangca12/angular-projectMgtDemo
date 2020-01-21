@@ -18,11 +18,11 @@ export class HomeComponent implements OnInit {
   //   // console.log(object);
   //   this.loginService.create(object);
   // }
-  constructor(private httpClient: HttpClient)  {}
+  constructor(private http: HttpClient)  {}
 
   login(object) {
     // console.log(object); //object here is already a json object or string
-    return this.httpClient.post('http://localhost:8090/login', object)
+    return this.http.post('http://localhost:8090/auth/login', object)
       .subscribe(response => {
         // @ts-ignore
         this.token = response; // return HttpErrorResponse contains the token string

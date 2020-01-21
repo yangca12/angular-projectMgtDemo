@@ -23,6 +23,9 @@ import { ClientFormComponent } from './client-form/client-form.component';
 import {ClientService} from './services/client.service';
 import { RegistrationComponent } from './registration/registration.component';
 import {LoginService} from './services/login.service';
+import {AuthInterceptor} from './helpers/auth.interceptor';
+import {UserService} from './services/user.service';
+import {AuthService} from './services/auth.service';
 
 
 @NgModule({
@@ -63,6 +66,9 @@ import {LoginService} from './services/login.service';
     ProjectsService,
     ClientService,
     LoginService,
+    AuthInterceptor,
+    UserService,
+    AuthService,
     {provide: ErrorHandler , useClass: AppErrorHandler} // config global error handler
 
   ],
