@@ -26,6 +26,7 @@ import {LoginService} from './services/login.service';
 import {AuthInterceptor} from './helpers/auth.interceptor';
 import {UserService} from './services/user.service';
 import {AuthService} from './services/auth.service';
+import { PublicComponent } from './public/public.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import {AuthService} from './services/auth.service';
     JobitemComponent,
     ProjectFormComponent,
     ClientFormComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    PublicComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,8 @@ import {AuthService} from './services/auth.service';
       {path: 'admin/projects', component: AdminProjectsComponent},
       {path: 'admin/projects/new', component: ProjectFormComponent},
       {path: 'admin/client/new', component: ClientFormComponent},
-      {path: 'registration', component: RegistrationComponent}
+      {path: 'registration', component: RegistrationComponent},
+      {path: 'public', component: PublicComponent}
 
     ])
 

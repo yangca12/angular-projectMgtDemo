@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProjectsService extends DataService {
 
   constructor(http: HttpClient) {
-    super('http://localhost:8090/projects', http);
+    super( http);
   }
 
 

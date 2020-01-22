@@ -8,6 +8,6 @@ import {HttpClient} from '@angular/common/http';
 export class ClientService extends DataService {
 
   constructor(http: HttpClient) {
-    super('http://localhost:8090/client', http);
+    super(http);
   }
 }

@@ -7,40 +7,41 @@ import { NotFoundError } from '../common/not-found-error';
 import { BadInput } from '../common/bad-input';
 import { map } from 'rxjs/operators';
 
+const ROOT_API_URL = 'http://localhost:8090/';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor(private url: string , private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getAll() {
-    return this.http.get<any[]>(this.url).pipe(
-        (map(response => response)),
-      // add 'any[]' after 'get'
-        catchError (this.handleError)
-    );
-   }
+  getAll(url): Observable<any> {
+    return this.http.get(ROOT_API_URL + url, {
+      responseType: 'text'
+    });
+  }
 
-  create(resource) {
-    return this.http.post(this.url, JSON.stringify(resource))
+
+  create(url, resource) {
+    return this.http.post(url, JSON.stringify(resource))
     .pipe(
         (map(response => response)),
         catchError (this.handleError));
   }
 
-  update(resource) {
+  // this method need to change
+  update(url, resource) {
     // patch method - only property that you need to change
-    return this.http.patch(this.url + '/' + resource.id, JSON.stringify({isRead: true}))
+    return this.http.patch(url + '/' + resource.id, JSON.stringify({isRead: true}))
     .pipe(
         (map(response => response)),
 
         catchError (this.handleError));
   }
 
-   delete(id) {
-    return this.http.delete(this.url + '/' + id)
+   delete(url, id) {
+    return this.http.delete(url + '/' + id)
     .pipe(
         (map(response => response)),
 

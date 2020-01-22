@@ -1,5 +1,5 @@
 <div class="col-md-12">
-  <div class="card card-container">
+  <div class="card card-header">
 
     <form
       *ngIf="!isSuccessful"
@@ -78,7 +78,7 @@
       </div>
 
       <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
-        Signup failed!<br />{{ errorMessage }}
+        Sign up failed!<br />{{ errorMessage }}
       </div>
     </form>
 

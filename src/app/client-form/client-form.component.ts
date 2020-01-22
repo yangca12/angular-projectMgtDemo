@@ -11,9 +11,9 @@ export class ClientFormComponent implements OnInit {
   constructor(private clientService: ClientService ) {
   }
 
-  save(client) {
-    this.clientService.create(client);
-  }
+  // save(client) {
+  //   this.clientService.create(client);
+  // }
 
   ngOnInit() {
   }

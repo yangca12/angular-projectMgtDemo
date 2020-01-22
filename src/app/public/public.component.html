@@ -1,0 +1,29 @@
+<div class="container" *ngIf="isEmpty">
+  <header class="jumbotron">
+    <p>{{ msg }}</p>
+  </header>
+</div>
+
+<div class = "container" *ngIf="!isEmpty">
+  <table class="table">
+    <thead class="thead-light">
+    <tr>
+      <th scope="col">UserID</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr  *ngFor ="let user of users">
+      <th scope="row">{{user.userID}}</th>
+      <td>{{user.userName}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.role}}</td>
+    </tr>
+
+    </tbody>
+  </table>
+
+</div>
+

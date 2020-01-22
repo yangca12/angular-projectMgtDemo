@@ -12,9 +12,9 @@ export class ProjectFormComponent implements OnInit {
   constructor(private projectService: ProjectsService ) {
    }
 
-  save(project) {
-    this.projectService.create(project);
-  }
+  // save(project) {
+  //   this.projectService.create(project);
+  // }
 
   ngOnInit() {
   }
