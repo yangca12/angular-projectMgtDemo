@@ -1,8 +1,8 @@
 # Project Management Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+## This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
-## Server-side REST API end-points developed using Spring boot + Spring Data JPA + MySQL
+# Server-side REST API end-points developed using Spring boot + Spring Data JPA + MySQL
 
 Root API URI : http://localhost:8090
 Repository link : https://github.com/yangca12/projectManagementDemo
