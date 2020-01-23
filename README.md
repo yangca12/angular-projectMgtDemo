@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
+## Server-side REST API end-points developed using Spring boot + Spring Data JPA + MySQL
+
+Root API URI : http://localhost:8090
+Repository link : https://github.com/yangca12/projectManagementDemo
+    
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4800/`. The app will automatically reload if you change any of the source files.
