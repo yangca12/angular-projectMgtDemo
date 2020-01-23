@@ -20,16 +20,22 @@ export class AuthService {
     return this.http.post(AUTH_API + 'login', {
       username: credentials.username,
       password: credentials.password
-      }, httpOptions
+      },  {
+      responseType: 'text'
+      }
       );
-
   }
 
   register(user): Observable<any> {
     return this.http.post(AUTH_API + 'register', {
       username: user.username,
       password: user.password,
-      email: user.email }, httpOptions);
+      email: user.email
+      },
+      {
+        responseType: 'text'
+      }
+      );
   }
 
 }

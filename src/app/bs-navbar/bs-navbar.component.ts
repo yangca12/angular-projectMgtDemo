@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TokenStorageService} from '../services/token-storage.service';
 
 
@@ -18,11 +18,15 @@ export class BsNavbarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isLoggedIn = !!this.tokenStorageService.getToken();
-    if (this.isLoggedIn) {
-      const user = this.tokenStorageService.getUser();
-      this.role = user.role;
-      this.username = user.username;
+
+    if (this.tokenStorageService.getToken() != null) {
+      this.isLoggedIn = true;
+      if (this.isLoggedIn) {
+        const user = this.tokenStorageService.getUser();
+        console.log(user);
+        this.role = user.role;
+        this.username = user.username;
+      }
     }
   }
 

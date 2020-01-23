@@ -13,6 +13,8 @@ export class RegistrationComponent implements OnInit {
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = '';
+  msg: string;
+  newUser: any;
 
   constructor(private authService: AuthService) { }
 
@@ -22,9 +24,14 @@ export class RegistrationComponent implements OnInit {
   onSubmit() {
     this.authService.register(this.form).subscribe(
       data => {
-        console.log(data);
-        this.isSuccessful = true;
-        this.isSignUpFailed = false;
+        this.msg = data;
+        console.log(this.msg);
+        this.newUser = JSON.parse(data);
+        console.log(this.newUser);
+        if (this.newUser.userID != null) {
+          this.isSuccessful = true;
+          this.isSignUpFailed = false;
+        }
       },
       err => {
         this.errorMessage = err.error.message;
