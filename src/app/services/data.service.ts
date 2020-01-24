@@ -7,7 +7,7 @@ import { NotFoundError } from '../common/not-found-error';
 import { BadInput } from '../common/bad-input';
 import { map } from 'rxjs/operators';
 
-const ROOT_API_URL = 'http://localhost:8090/';
+const ROOT_API_URL = 'http://www.cafytech.com:8090/';
 
 @Injectable({
   providedIn: 'root'
